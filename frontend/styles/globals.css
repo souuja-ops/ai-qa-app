@@ -1,0 +1,135 @@
+:root {
+  --primary: #10a37f;
+  --primary-hover: #0d8e6f;
+  --text-primary: #333;
+  --text-secondary: #666;
+  --text-tertiary: #999;
+  --bg-primary: #fff;
+  --bg-secondary: #f7f7f8;
+  --bg-tertiary: #ececf1;
+  --border-color: #e5e5e6;
+  --error-bg: #f8d7da;
+  --error-text: #721c24;
+  --code-bg: #f6f6f6;
+  --avatar-bg: #e5e5e6;
+  --loading-dot: #999;
+}
+
+.dark {
+  --primary: #10a37f;
+  --primary-hover: #0d8e6f;
+  --text-primary: #fff;
+  --text-secondary: #d1d5db;
+  --text-tertiary: #9ca3af;
+  --bg-primary: #343541;
+  --bg-secondary: #444654;
+  --bg-tertiary: #40414f;
+  --border-color: #565869;
+  --error-bg: #450a0a;
+  --error-text: #fca5a5;
+  --code-bg: #1e1e1e;
+  --avatar-bg: #40414f;
+  --loading-dot: #9ca3af;
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.25rem);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Global utility classes */
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemsCenter {
+  align-items: center;
+}
+
+.justifyBetween {
+  justify-content: space-between;
+}
+
+.gap2 {
+  gap: 0.5rem;
+}
+
+.p4 {
+  padding: 1rem;
+}
+
+.mt1 {
+  margin-top: 0.25rem;
+}
+
+.mt2 {
+  margin-top: 0.5rem;
+}
+
+.textSm {
+  font-size: 0.875rem;
+}
+
+.textXs {
+  font-size: 0.75rem;
+}
+
+.fontSemibold {
+  font-weight: 600;
+}
+
+.roundedLg {
+  border-radius: 0.5rem;
+}
+
+.roundedFull {
+  border-radius: 9999px;
+}
+
+.transition {
+  transition: all 0.2s ease;
+}
+
+.hFull {
+  height: 100%;
+}
+
+.wFull {
+  width: 100%;
+}
