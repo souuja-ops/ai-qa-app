@@ -2,7 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
-    legacyCss: true, // This disables lightningcss
+    // Completely disable lightningcss
+    css: false,
   },
 };
 
