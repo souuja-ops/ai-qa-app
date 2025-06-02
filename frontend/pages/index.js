@@ -50,9 +50,12 @@ export default function Home() {
     setLoading(true);
     setError("");
 
+    // Use environment variable for backend URL, fallback to localhost
+    const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8000";
+
     try {
       // Send user input to backend API
-      const res = await fetch("http://localhost:8000/ask", {
+      const res = await fetch(`${backendUrl}/ask`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query: input }),
